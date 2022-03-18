@@ -1,0 +1,18 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Bundler related directories
+.cache
+.parcel-cache
+Practice/.parcel-cache
+dist
+Practice/dist
+package-lock.json
+Practice/package-lock.json
+
+# Dependency directories
+node_modules
+Practice/node_modules
+clubServer/node_modules

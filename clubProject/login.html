@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Login Here!</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Ubuntu:ital,wght@1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="club.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li class="active"><a href="login.html">Login</a></li>
+                <li><a href="register.html">Register</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="clubActivities.html">Activities</a></li>
+            </ul>
+        </nav>
+        <h1>Let's Begin!</h1>
+        <p>Login with your Email and Password.</p>
+    </header>
+    <main>
+        <form>
+            <label>Email: </label>
+            <input type="email">
+
+            <label>Password: </label>
+            <input type="password">
+
+            <button type="button">Login</button>
+        </form>
+        <section>
+            <h1>Doodle Here</h1>
+            <svg id="Doodle" version="1.1" baseProfile="full" width="500" height="300" xmlns="http://www.w3.org/2000/svg" />
+        <p>
+            <button id="Add" type="button">Add</button>
+            <button id="Clear" type="button">Clear</button>
+        </p>
+        </section>
+    </main>
+    <footer>
+        <p> &copy 2021 Dancers Hub</p>
+    </footer>
+    <script>
+        mySvg = document.getElementById("Doodle");
+        var maxSize = 50,
+            maxX = 500,
+            maxY = 300;
+        clear = document.getElementById("Clear");
+        add = document.getElementById("Add");
+
+        add.addEventListener("click", function (event) {
+            let cx = Math.random() * (maxX - maxSize);
+            let cy = Math.random() * (maxY - maxSize);
+            let r = Math.random()*maxSize;
+            let circle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+            circle.setAttribute("cx",cx);
+            circle.setAttribute("cy",cy);
+            circle.setAttribute("r",r);
+            let colorStr = `rgb(${255*Math.random()}, ${255*Math.random()}, ${255*Math.random()})`;
+            circle.setAttribute("fill", colorStr);
+            circle.setAttribute("fill-opacity", 0.7);
+            mySvg.appendChild(circle);
+        });
+
+        clear.addEventListener("click", function () {
+            mySvg.innerHTML = "";
+        });
+    </script>
+</body>
+
+</html>

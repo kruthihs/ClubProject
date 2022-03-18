@@ -1,0 +1,5 @@
+{
+    "/activities": {
+      "target": "http://localhost:5555"
+    }
+}

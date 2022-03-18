@@ -1,0 +1,27 @@
+{
+    "title": "Applicant",
+    "description": "An applicant for club membership",
+    "type": "object",
+    "properties": {
+        "name": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 40
+        },
+        "email": {
+            "description": "email of the applicant",
+            "type": "string",
+            "format": "email",
+            "minLength": 1,
+            "maxLength": 50
+        },
+       "phone": {
+            "description": "Phone number of the applicant",
+            "type": "number",
+            "minimum": 1e9,
+            "maximum": 9999999999
+        }
+    },
+    "required": ["name", "email","phone"],
+    "additionalProperties": false
+}

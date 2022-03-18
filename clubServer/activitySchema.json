@@ -1,0 +1,22 @@
+{
+    "title": "Activity",
+    "description": "A club activity for the schedule",
+    "type": "object",
+    "properties": {
+        "name": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 40
+        },
+        "dates": {
+            "description": "the date or dates of the activity",
+            "type": "array"
+        },
+        "instructor": {
+            "description": "the instructor for the activity",
+            "type": "array"
+        }
+    },
+    "required": ["name", "dates","instructor"],
+    "additionalProperties": false
+}

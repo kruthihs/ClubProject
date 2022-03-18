@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Sign up Here!</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Ubuntu:ital,wght@1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="club.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="login.html">Login</a></li>
+                <li class="active"><a href="register.html">Register</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="clubActivities.html">Activities</a></li>
+            </ul>
+        </nav>
+        <h1>Apply Now!</h1>
+    </header>
+    <main>
+        <form>
+            <label>Name: </label>
+            <input id ="name" type="text" minlength="4" maxlength="8" required>
+
+            <label>Email: </label>
+            <input id ="email" type="email" placeholder="example@abc.com"  pattern=".+@[a-z0-9.-]+\.com" size="30" required>
+
+            <label>Password: </label>
+            <input id ="password" type="password" minlength="8" maxlength="10" required>
+            
+            <label>Phone: </label>
+            <input id ="phone" type="tel" size="20" minlength="10" maxlength="14" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+            placeholder="357-461-5839" required>
+
+            <label>Dance Level: </label>
+            <select>
+                <option>Beginner</option>
+                <option>Intermediate</option>
+                <option>Advanced</option>
+                <option>Never Danced before</option>
+            </select>
+            <label>Comments:</label>
+            <textarea id="comments" maxlength="500" size="50"></textarea>
+        </form>
+        <button type="submit" onclick="showInput()">Sign Up</button>
+    </main>
+    <footer>
+        <p> &copy 2021 Dancers Hub</p>
+    </footer>
+    
+    <section id="ThanksDialog">
+        <div id = "dialog">
+            <h2>Thank you for singing up with us!</h2>
+            <p id='display'></p>
+            <button id="Close" type="button" onclick="closeDialog()">Close</button>
+        </div>
+    </section>
+    <script>
+        var ThanksDialog = document.getElementById('ThanksDialog');
+        function showInput() {
+            var displaySetting = ThanksDialog.style.display;
+            ThanksDialog.classList.add("show");
+            var dispText = "Your Name:"+document.getElementById("name").value +" Email:"+document.getElementById("email").value+" Phone:"+document.getElementById("phone").value;
+            document.getElementById('display').innerHTML = dispText;                        
+        }
+
+        function closeDialog() {
+            ThanksDialog.classList.remove("show");
+        }
+    </script>
+</body>
+
+</html>

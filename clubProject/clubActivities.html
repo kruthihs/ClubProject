@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- English -->
+
+<head>
+    <title>Club Activities</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Ubuntu:ital,wght@1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="club.css">
+    <script src="eventData.js"></script>
+</head>
+<!-- I'm an HTML comment -->
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="register.html">Register</a></li>
+                <li class="active"><a href="clubActivities.html">Activities</a></li>
+            </ul>
+        </nav>
+        <h1>Dance it out! &#x1f483 </h1>
+        <p>Now learn all your favourite moves at home &#x1f4af.</p>
+        <img src="images/salsa.jpeg">
+        <p>Work in Progress.</p>
+    </header>
+    <main id = "main">
+        <svg height="21" viewBox="0 0 21 21" width="21" xmlns="http://www.w3.org/2000/svg">
+            <g fill="none" fill-rule="evenodd" transform="translate(2 4)">
+                <path d="m3 2.5h12.5l-1.5855549 5.54944226c-.2453152.85860311-1.0300872 1.45055774-1.9230479 1.45055774h-6.70131161c-1.01909844 0-1.87522688-.76627159-1.98776747-1.77913695l-.80231812-7.22086305h-2"
+                    stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+                <g fill="currentColor">
+                    <circle cx="5" cy="12" r="1" />
+                    <circle cx="13" cy="12" r="1" />
+                </g>
+            </g>
+        </svg>
+        <svg height="21" viewBox="0 0 21 21" width="21" xmlns="http://www.w3.org/2000/svg">
+            <path d="m7.24264069 2.24264069c.5-2.5 4.34314571-2.65685425 6.00000001-1 1.6034073 1.60340734 1.4999617 4.3343931 0 6l-6.00000001 6.00000001-6-6.00000001c-1.65685425-1.65685425-1.65685425-4.34314575 0-6 1.54996042-1.54996043 5.5-1.5 6 1z"
+                fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" transform="translate(3.257 4.257)"
+            />
+        </svg>
+        <svg height="21" viewBox="0 0 21 21" width="21" xmlns="http://www.w3.org/2000/svg">
+            <g fill="none" fill-rule="evenodd" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" transform="translate(1 1)">
+                <path d="m.5 9.5 9-9 9 9" />
+                <path d="m2.5 7.5v8c0 .5522847.44771525 1 1 1h3c.55228475 0 1-.4477153 1-1v-4c0-.5522847.44771525-1 1-1h2c.5522847 0 1 .4477153 1 1v4c0 .5522847.4477153 1 1 1h3c.5522847 0 1-.4477153 1-1v-8"
+                />
+            </g>
+        </svg>
+    </main>
+    <footer>
+        <p> &copy 2021 Dancers Hub</p>
+    </footer>
+    <script>
+    let table = document.createElement("table");
+    let thead = document.createElement("thead");
+    let tbody = document.createElement("tbody");
+    let tr1 = document.createElement("tr");
+    let th1 = document.createElement("th");
+    let th2 = document.createElement("th");
+    let th3 = document.createElement("th");
+    let tr2 = document.createElement("tr");
+    let td1 = document.createElement("td");
+    let td2 = document.createElement("td");
+    let td3 = document.createElement("td");
+    let tr3 = document.createElement("tr");
+    let td4 = document.createElement("td");
+    let td5 = document.createElement("td");
+    let td6 = document.createElement("td");
+    let tr4 = document.createElement("tr");
+    let td7 = document.createElement("td");
+    let td8 = document.createElement("td");
+    let td9 = document.createElement("td");
+    table.appendChild(thead);
+    table.appendChild(tbody);
+
+    main = document.getElementById("main");
+    main.appendChild(table);
+
+    thead.appendChild(tr1);
+    tr1.appendChild(th1);
+    tr1.appendChild(th2);
+    tr1.appendChild(th3);
+    th1.innerHTML = "Activity"
+    th2.innerHTML = "Dates"
+    th3.innerHTML = "Instructors"
+    
+    tbody.appendChild(tr2);
+    tr2.appendChild(td1);
+    tr2.appendChild(td2);
+    tr2.appendChild(td3);
+    td1.innerHTML = events[0].name;
+    td2.innerHTML = events[0].dates;
+    td3.innerHTML = events[0].instructor;
+    tbody.appendChild(tr3);
+    tr3.appendChild(td4);
+    tr3.appendChild(td5);
+    tr3.appendChild(td6);
+    td4.innerHTML = events[1].name;
+    td5.innerHTML = events[1].dates;
+    td6.innerHTML = events[1].instructor;
+    tbody.appendChild(tr4);
+    tr4.appendChild(td7);
+    tr4.appendChild(td8);
+    tr4.appendChild(td9);
+    td7.innerHTML = events[2].name;
+    td8.innerHTML = events[2].dates;
+    td9.innerHTML = events[2].instructor;
+    </script>
+
+</body>
+
+</html>
